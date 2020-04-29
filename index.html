@@ -1,0 +1,105 @@
+
+<html lang="ao">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Veja os dados numéricos da pandemia do coronavírus em tempo real">
+    <meta name="author" content="Daniel Gustavo Yava">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid</title>
+    <link rel="stylesheet"  href="./CSS/styles.css">
+</head>
+    <body>
+        
+        <nav class="navbar">
+            <div class="navbar__brand">
+                <h1>Pandoravid</h1>
+            </div>
+            <div class="navbar__list">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#note1">Covid-19</a></li>
+                    <li><a href="#note2">Sintomas</a></li>
+                    <li><a href="#note3">Prevenção</a></li>
+                    <li><button onclick="window.location.assign('./mapa.html')">Ver no mapa</button></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="container">
+            <div id="box-search">
+                <input type="search" placeholder="Digite o nome do país" name="input_search" id="input_search">
+                <input type="button"  id="btn_search" value="Ok">
+                <div class="dropDown">
+                </div>
+            </div>
+            <div id="sumary">
+                <h2>Nível mundial</h2>
+                <span>
+                     confirmado:<b id="labelTotalConfirmedWorld" style="color: #ff8d00;"> 0</b> Mortes: <b id="labelTotalDeathsWorld" style="color: #fb0a0a;;">0</b> Recuperados: <b id="labelTotalRecoveredWorld" style="color: #21e40a;">0</b>
+                </span>
+            </div>
+            <div id="caso">
+                <div id="flag" class="itens">
+                    <h2 id='country_name'>Angola</h2>
+                    <img id="imgFlag"/>
+                    <img >
+                </div>
+                <div class="itens">
+                    <h2>confirmados</h2>
+                    <p id="labelConfirmados" style="color: #ff8d00;;font-family: arial;">0</p>
+                </div>
+                <div class="itens">
+                    <h2>Mortes</h2>
+                    <p id="labelMortes" style="color: #fb0a0a; font-family: arial;">0</p>
+                </div>
+                <div class="itens">
+                    <h2>Recuperados</h2>
+                    <p id="labelRecuperados" style="color: #21e40a; font-family: arial;">0</p>
+                </div>
+            </div>
+            
+        </div>
+        <div id="notes">
+            <div id="note1" class="note1">
+                <h1>O que é o Covid-19</h1>
+                <p>A COVID-19 é uma doença respiratória causada pelo vírus SARS-CoV-2, pertencente à família dos coronavírus. Nessa família estão presentes vírus que podem causar doenças em animais, inclusive no homem, como diversos tipos de resfriado. A COVID-19 é uma infecção que se inicia com um quadro semelhante ao da gripe e resfriados, no entanto, pode agravar-se, podendo levar a óbito.
+
+                    Os primeiros casos de COVID-19 surgiram na cidade de Wuhan, na China, em dezembro de 2019, apresentando quadros de pneumonia de causa desconhecida. O grande aumento de número de pessoas doentes fez com que o governo daquela cidade determinasse um período de quarentena, a partir do dia 23 de janeiro de 2020.
+                    
+                    Como a doença apresenta uma grande transmissibilidade, logo começaram a surgir casos em outros países. No dia 11 de março de 2020, a Organização Mundial de Saúde (OMS) decretou estado de pandemia.</p>
+            </div>
+            <div id="note2" class="note1">
+                <h1>Quais são os Sintomas que o Covid-19 apresenta?</h1>
+                <p>A COVID-19 apresenta um período de incubação (período entre o contágio e o surgimento dos sintomas) de cerca de 14 dias. Os principais sintomas da doença são  febre, tosse seca e dificuldade respiratória. Além disso, alguns pacientes podem apresentar também dores no corpo, coriza, fadiga, dor de garganta e diarreia.
+
+                    Os sintomas surgem, geralmente, de forma leve e gradual, e muitos doentes podem se curar sem a necessidade de tratamento especial. No entanto, algumas pessoas podem apresentar agravamento da doença, desenvolvendo dificuldade respiratória e podendo, inclusive, morrer. As pessoas idosas e indivíduos que apresentam certos problemas de saúde, como pressão alta, problemas cardíacos e diabetes, estão mais propensas ao agravamento da doença.</p>
+            </div>
+            <div id="note3" class="note1">
+                <h1>Como posso previnir-me do Covid-19</h1>
+                <p>Para se prevenir e também evitar a disseminação da COVID-19, alguns cuidados devem ser tomados, como:
+
+                    Lavar as mãos frequentemente com água e sabão e, na ausência desses,  higienizá-las utilizando álcool gel em 70%;
+                    Ao tossir e espirrar, cubra o nariz e a boca utilizando um lenço, que deve ser descartado em seguida, ou então a parte interna do cotovelo;
+                    Evite cumprimentar com apertos de mão, beijos e abraços;
+                    Mantenha os ambientes arejados;
+                    Evite tocar nos olhos, boca e nariz com as mãos sem a devida higienização;
+                    Não compartilhe objetos de uso pessoal, como copos e talheres;
+                    Higienize objetos que são manuseados com frequência, como celulares;
+                    Mantenha-se a uma distância de pelo menos 1 metro das pessoas que estão tossindo ou espirrando;
+                    Evite aglomerações;
+                    Os profissionais de saúde devem ter atenção especial quanto ao uso de Equipamentos de Proteção Individuais (EPIs).</p>
+            </div>
+        </div>
+        <div id="map">
+
+        </div>
+        
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./JS/manipularEstilos.js"></script>
+        <script src="./JS/Dados.js"></script>
+        <script src="./JS/Casos.js"></script>
+        <script src="./JS/global.js"></script>
+        <script src="./JS/countries.js"></script>
+        
+         
+    </body>
+</html>

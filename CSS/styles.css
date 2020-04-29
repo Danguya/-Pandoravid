@@ -1,0 +1,261 @@
+/**
+*author: Daniel Gustavo Yava
+*data: 02/04/2020
+*
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;531;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;531;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;531;600;700;800;900&display=swap');
+
+body{
+  
+   background-image: url('../images/1.jpg');
+   background-color: #7653bf;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   height: 1000px;
+   overflow-x: hidden;
+}
+body:before {
+    content: "";
+    position: absolute;
+    background: url('../images/1.jpg');
+    background-size: cover;
+    z-index: -1; 
+    height: 35%;
+    width: 20%;
+    transform: scale(5);
+    transform-origin: top left;
+    filter: blur(2px);
+}
+
+.navbar{
+    background: none;
+    z-index: 5;
+    width: 90%;
+    padding: 0px 100px;
+    box-sizing: content-box;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 6px 3px 11px #00000094;
+}
+.navbar__list ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+.navbar__list ul li{
+    margin-left: 50px;
+}
+.navbar__list ul li a{
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+}
+.navbar__list ul li button{
+    background: linear-gradient(112.82deg, #f52042 19.93%, #AD50CA 102.22%);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Inter';
+    font-weight: 700;
+    color: white;
+    border-radius: 9px;
+    cursor: pointer;
+    -webkit-transition: .4s ease;
+    transition: .4s ease;
+}
+.navbar__list ul li button:hover{
+    transform: translateY(-5px);
+}
+.navbar.scroll{
+    background: white;
+    margin-top: -20px;
+    border-radius: 20px;
+    width: 90%;
+    animation: fadeDown .4s ease 1s forwards;
+    box-shadow: 0px 0px 30px rgba(68, 68, 68, 0.2);
+
+
+}
+@keyframes fadeDown{
+    0%{
+        top: -100px;
+    }
+    100%{
+        top:20px
+    }
+}
+.navbar__brand{
+    background-color: white;
+    padding: 0px 8px;
+    cursor: pointer;
+    height: 80px;
+    line-height: 26px;
+}
+.navbar__brand h1{
+    font-family: 'Arial';
+    cursor: pointer;
+    font-size: 34px;
+    font-weight: 700;
+    background: linear-gradient(112.82deg, #f52042 19.93%, #AD50CA 102.22%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color: transparent;
+    
+}
+#container{
+    height: 300px;
+    width: 1000px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    top:20%;
+    left: 10%;
+    flex-direction: row;
+}
+#box-search{
+    background-color: white;
+    width: 566px;
+    height: 40px;
+    border-radius: 10px 10px 0px 10px;
+    box-shadow: 1px 7px 6px #3331319e;
+}
+#box-search input[type="search"]{
+    border: none;
+    width: 500px;
+    position: relative;
+    height: 40px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 20px;
+    padding: 13px;
+    color: #bdbdbdc9;
+    border-radius: 7px 0px 0px 0px;
+    
+
+}
+
+#btn_search{
+    border: none;
+    height: 40px;
+    margin-left: -4px;
+    margin-top: 0px;
+    position: absolute;
+    border-radius: 0px 10px 0px 0px;
+    background: #00a1ff;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    width: 70px;
+    outline: none;
+}
+#sumary{
+    position: absolute;
+    margin-top: 50px;
+    padding: 10px;
+    background: white;
+    width: 1000px;
+    height: 100px;
+    text-align: center;
+    box-shadow: 0px 7px 6px #00000087;
+}
+#sumary span{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: arial;
+}
+#caso{
+    background-color: white;
+    height: 200px;
+    width: 1000px;
+    position: absolute;
+    top: 80%;
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.itens{
+    background-color: none;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+
+    overflow: hidden;
+    text-overflow: '';
+    direction: ltr;
+    word-break: break-word;
+    
+}
+.itens h2{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    
+}
+.itens p{
+    font-size: 30px;
+    display: inline-block;
+}
+.dropDown{
+    border-top: 2px solid #999;
+    z-index: 2;
+    position: absolute;
+    background-color: white;
+    width: 496px;
+    box-shadow: 0px 5px 4px grey;
+
+    transition: 1s;
+}
+
+.dropDown > div{
+    padding: 15px;
+    font-size: 20px;
+    color: black;
+   
+    font-family: arial;
+}
+.dropDown :first-child{
+    border: none;
+}
+.dropDown > div:hover{
+    background: #ff003b;
+    color: white;
+    cursor: pointer;
+}
+#notes{
+    width: 100%;
+    position: relative;
+    display: flex;
+    min-height: 1000px;
+    flex-direction: column;
+    top: 58%;
+}
+.note1{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-family: arial;
+    line-height: 2;
+}
+.leaflet-container{
+    width: 1000px;
+    height: 640px;
+    position: relative;
+    outline: none;
+    top: 58%;
+    left: 13%;
+}
